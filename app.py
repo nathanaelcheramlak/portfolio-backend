@@ -14,12 +14,11 @@ app = Flask(__name__)
 # Credentials - using consistent naming
 BOT_TOKEN = os.getenv('BOT_TOKEN')
 CHAT_ID = os.getenv('CHAT_ID')
-FRONTEND_URL = os.getenv('FRONTEND_URL')
 
 # Cors
 CORS(app, resources={
     r"/send": {
-        "origins": [FRONTEND_URL],
+        "origins": ["https://nathanaelcheramlak.vercel.app"],
         "methods": ["POST", "OPTIONS"],
         "allow_headers": ["Content-Type"]
     }
