@@ -20,7 +20,7 @@ FRONTEND_URL = os.getenv('FRONTEND_URL')
 CORS(app, resources={
     r"/send": {
         "origins": [FRONTEND_URL],
-        "methods": ["POST"],
+        "methods": ["POST", "OPTIONS"],
         "allow_headers": ["Content-Type"]
     }
 })
