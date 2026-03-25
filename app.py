@@ -18,7 +18,7 @@ CHAT_ID = os.getenv('CHAT_ID')
 # Cors
 CORS(app, resources={
     r"/send": {
-        "origins": ["https://nathanaelcheramlak.vercel.app"],
+        "origins": ["https://nathanaelcheramlak.vercel.app", "https://www.natcher.me", "https://natcher.vercel.app"],
         "methods": ["POST", "OPTIONS"],
         "allow_headers": ["Content-Type"]
     }
